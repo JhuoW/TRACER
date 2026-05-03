@@ -32,8 +32,7 @@ Builds the augmented training set from the upstream
 [`GraphWiz/GraphInstruct`](https://huggingface.co/datasets/GraphWiz/GraphInstruct)
 dataset. Three preprocessors are exposed by `dataset/generate_permuted.py`;
 each can be re-run independently and is fully deterministic under `--seed`.
-Full design notes: [`model_components/01_data_augmentation.md`](model_components/01_data_augmentation.md)
-and [`dataset/README.md`](dataset/README.md).
+Full design notes: [`dataset/README.md`](dataset/README.md).
 
 ```bash
 # 1. GraphInstruct-Permuted — k permuted copies per sample
@@ -99,7 +98,7 @@ bash script/run_eval.sh --strict checkpoints/rl
 bash script/run_eval.sh --strict checkpoints/rl_prm
 ```
 
-This uses `evaluate_strict.py` with `max_new_tokens=1024`,
+This uses `evaluation/evaluate_strict.py` with `max_new_tokens=1024`,
 `--truncate_first_answer`, vLLM greedy decoding, and pure GraphWiz `check()`.
 
 **Legacy modes (skip-on-no-### scoring):**
