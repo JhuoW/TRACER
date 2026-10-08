@@ -1,4 +1,4 @@
-# TRACER: Large Language Models as Graph Computational Solvers via Topological Residual Attention
+# TRACER: Large Language Models as Graph Computational Solvers via Topological Residual Attention (NeurIPS 2026)
 
 TRACER (Topological Residual Attention for Computational Execution and Reasoning on Graphs) trains LLMs to natively solve graph computational problems through architecture modification and multi-phase training. Built on LLaMA-3.1-8B-Instruct with Topology-Aware Residual Attention (TRA) and evaluated on GraphInstruct (9 tasks).
 
@@ -8,8 +8,7 @@ All training and evaluation were performed on a workstation with **3 ×
 NVIDIA RTX PRO 6000 Blackwell** GPUs (≈ 95 GB HBM each, SM 12.0). The
 DeepSpeed ZeRO configurations, batch sizes, and `--num-gpus` defaults in
 the launch scripts assume this 3-GPU layout. The pipeline can be run on a
-different GPU count by passing the GPU list to each script (`bash
-script/run_sft.sh OUTPUT "0,1"`), but the per-GPU memory budget assumes
+different GPU count by passing the GPU list to each script (`bash script/run_sft.sh OUTPUT "0,1"`), but the per-GPU memory budget assumes
 ≥ 80 GB cards.
 
 ## Installation
